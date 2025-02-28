@@ -8,9 +8,9 @@ import rateLimit from 'express-rate-limit';
 import cors from 'cors';
 
 const app = express();
-const port = process.env.PORT || 3000;
 env.config();
 
+const PORT = process.env.PORT || 10000;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -65,6 +65,9 @@ app.get('/', async (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+const server = app.listen(PORT, '0.0.0.0', () => {
+  console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
+
+server.keepAliveTimeout = 120 * 1000; 
+server.headersTimeout = 120 * 1000;

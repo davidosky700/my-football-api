@@ -86,17 +86,12 @@ tr:hover {
 
 /* Responsive Table Scroll */
 @media (max-width: 768px) {
-    /* table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
-    } */
+    
     .gf, .ga { 
-        display: none;  /* Hide GF and GA */
+        display: none; 
     }
 }
 
-/* Matches */
 .matches {
     display: flex;
     flex-direction: column;
@@ -135,7 +130,6 @@ tr:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Button */
 .button {
     display: inline-block;
     padding: 10px 20px;
